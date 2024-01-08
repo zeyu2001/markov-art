@@ -163,7 +163,7 @@
         point = stack.pop();
         index = (point.x + point.y * width) << 2;
         color = getColor(imageData, index);
-        for (adj of ADJACENT) {
+        for (let adj of ADJACENT) {
           x = point.x + adj.x;
           y = point.y + adj.y;
           if (x >= 0 && x < width && y >= 0 && y < height) {

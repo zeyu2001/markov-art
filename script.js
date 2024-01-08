@@ -85,6 +85,14 @@ function initDOM() {
       reader.readAsDataURL(file);
     }
   });
+
+  // Load default image
+  let image = new Image();
+  image.setAttribute("crossOrigin", "anonymous");
+  image.src = "hughes.jpg";
+  image.onload = function () {
+    loadImage(image.src);
+  }
 }
 
 function initENV() {
